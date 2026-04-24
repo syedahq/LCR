@@ -156,7 +156,7 @@ X_train, X_test, y_train, y_test = train_test_split (predictors_standardized, wi
 
 knn = KNeighborsClassifier()
 
-param_grid = {'n_neighbours' : range(1, 51)}
+param_grid = {'n_neighbors' : range(1, 51)}
 
 grid = GridSearchCV(knn, param_grid, cv=10)
 grid.fit(X_train, y_train)
@@ -173,7 +173,7 @@ best_k
 # In[ ]:
 
 
-knn_final = KNeigherborsClassifier(n_neighbors=best_k)
+knn_final = KNeighborsClassifier(n_neighbors=best_k)
 
 knn_final.fit(X_train, y_train) 
 
